@@ -1,7 +1,7 @@
 [1]: https://www.tuxcademy.org/download/de/lxes/lxes-de-manual.pdf
 [7]: https://www.tuxcademy.org/
 
-# Exam 701: DevOps Tools Engineer 
+# ![](https://www.lpice.eu/fileadmin/_processed_/csm_LPIC-DevOpsToolsEngineer_43de3c4735.jpg) Exam 701: DevOps Tools Engineer 
 
 ### Topics
 
@@ -10,6 +10,7 @@
 * [Topic 703: Machine Deployment](#topic-703-machine-deployment)
 * [Topic 704: Configuration Management](#topic-704-configuration-management)
 * [Topic 705: Service Operations](#topic-705-service-operations)
+* [Bonusmaterial](#bonusmaterial)
 
 ## Topic 701: Software Engineering
 
@@ -463,3 +464,9 @@ The following is a partial list of the used files, terms and utilities:
 * [Docker Logging](https://docs.docker.com/config/containers/logging/configure/)
 * [Kubernetes Logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
 
+## Bonusmaterial
+
+> [⇧ **Nach oben**](#topics)
+
+* [CNCF Cloud Native Trail Map um ihre Cloud-native Reise zu beginnen](https://github.com/cncf/trailmap)
+* [CNCF Cloud native Landkarte](https://landscape.cncf.io/)
