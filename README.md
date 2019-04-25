@@ -470,3 +470,7 @@ The following is a partial list of the used files, terms and utilities:
 
 * [CNCF Cloud Native Trail Map um ihre Cloud-native Reise zu beginnen](https://github.com/cncf/trailmap)
 * [CNCF Cloud native Landkarte](https://landscape.cncf.io/)
+* [50 Best Kubernetes Architecture Tutorials](https://securityboulevard.com/2019/04/50-best-kubernetes-architecture-tutorials/)
+* [Container Design Patterns for Kubernetes - Part 1](https://www.weave.works/blog/container-design-patterns-for-kubernetes/)
+* [Praxiserfahrung DevOps – DevOps was?](https://stage-news.digicomp.ch/?p=39594&preview=1&_ppp=d1c5e6b870)
+
