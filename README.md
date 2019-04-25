@@ -472,5 +472,5 @@ The following is a partial list of the used files, terms and utilities:
 * [CNCF Cloud native Landkarte](https://landscape.cncf.io/)
 * [50 Best Kubernetes Architecture Tutorials](https://securityboulevard.com/2019/04/50-best-kubernetes-architecture-tutorials/)
 * [Container Design Patterns for Kubernetes - Part 1](https://www.weave.works/blog/container-design-patterns-for-kubernetes/)
-* [Praxiserfahrung DevOps – DevOps was?](https://stage-news.digicomp.ch/?p=39594&preview=1&_ppp=d1c5e6b870)
+* [Praxiserfahrung DevOps – DevOps was?](https://www.digicomp.ch/blog/2019/04/25/praxiserfahrung-devops-devops-was)
 
