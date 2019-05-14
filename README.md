@@ -88,10 +88,10 @@ The following is a partial list of the used files, terms and utilities:
 **Unterlagen**
 
 NoSQL Datenbanken
-* [Key / Value Stores](https://github.com/mc-b/bigdata/tree/master/redis)
-* [Document Stores](https://github.com/mc-b/bigdata/tree/master/mongodb)
-* [Graphen Datenbanken](https://github.com/mc-b/bigdata/tree/master/neo4j)
-* [Column Family Stores](https://github.com/mc-b/bigdata/tree/master/cassandra)
+* [Key / Value Stores](https://github.com/mc-b/duk/tree/master/bigdata/redis)
+* [Document Stores](https://github.com/mc-b/duk/tree/master/bigdata/mongodb)
+* [Graphen Datenbanken](https://github.com/mc-b/duk/tree/master/bigdata/neo4j)
+* [Column Family Stores](https://github.com/mc-b/duk/tree/master/bigdata/cassandra)
 
 Big Data
 * [Grundlagen](https://github.com/mc-b/bigdata/blob/master/intro/01-Einleitung.md)
@@ -99,7 +99,7 @@ Big Data
 * [Datenquellen](https://github.com/mc-b/bigdata/blob/master/intro/20-Datenquellen.md)
 
 Message Brokers und Message Queues
-* [Kafka](https://github.com/mc-b/bigdata/tree/master/kafka)
+* [Kafka](https://github.com/mc-b/duk/tree/master/kafka)
 * [Spark](https://github.com/mc-b/bigdata/tree/master/spark)
 
 ### 701.3 Source Code Management 
