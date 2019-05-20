@@ -203,6 +203,60 @@ The following is a partial list of the used files, terms and utilities:
 * [Container aus dem Modul M300](https://github.com/mc-b/M300/blob/master/30-Container)
 * [Container Sicherheit aus dem Modul M300](https://github.com/mc-b/M300/blob/master/35-Sicherheit)
 
+#### Container - Linux Native Variante
+
+Um das Verhalten von Container manuell auf Linux zu Erzeugen holen wir zuerst eine Linux Distribution und entpacken diese in einem Verzeichnis `ubuntu`.
+
+    wget https://github.com/tianon/docker-brew-ubuntu-core/raw/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/xenial/ubuntu-xenial-core-cloudimg-amd64-root.tar.gz -O ubuntu.tgz
+    mkdir ubuntu
+    cd ubuntu
+    tar xzf ../ubuntu.tgz
+    
+Anschliessend verwenden wir den Befehl `unshare` um in den Namespaces des aktuellen Prozesses zu wechseln.
+
+    sudo unshare -n  -p --fork  --mount-proc /bin/bash
+    
+Nun sollte nur noch ein `localhost` Netzwerkadapter und keine Prozesse ausser ab dem aktuellen abwärts sichtbar sein.    
+    
+    ping google.com
+    ifconfig -a
+    pstree -n -p
+    
+Das Filesystem können wir allerdings noch sehen. Das unterbinden wir mit dem Befehl `chroot`
+
+    chroot .
+    
+Nun laufen wir in einer sogenannten **Sandbox** oder halt in einem **Container**.
+
+Ausprobieren durch die Anzeige der HOME Verzeichnis
+
+    ls -l /home
+    
+Auch sind eine Reihe von Befehlen, aus Sicherheitsgründen, nicht mehr vorhanden, z.B.:
+
+    sudo -i
+    ifconfig -a
+    
+#### Container - Docker Variante
+
+Docker ist ein Produkt welche diese Funktionalität mittels des Kommandozeilenprogrammes `docker` zur Verfügung stellt.
+
+    docker run -it ubuntu /bin/bash
+    
+Es wird das Container Image `ubuntu` von [https://hub.docker.com](https://hub.docker.com) geholt und als Container gestartet.    
+
+#### Container - Kubernetes Variante
+
+Kubernetes erweitert die Docker Funktionalität um die Möglichkeit mehrere Containers Hosts zu einem Cluster zusammenzustellen.
+
+Haben wir z.B. ein Cluster mit 3 Container Hosts, erzeugt der folgende Befehle 20 Container, mit dem Apache Web Server, und verteilt diese auf die drei Hosts.
+
+    kubectl run apache --replicas=20 --expose=true --image=httpd --port=80 
+    
+Das Resultat können wir uns wie folgt anschauen:
+
+    kubectl get pods --selector=run=apache -o wide 
+
 ### 702.2 Container Deployment and Orchestration 
 *** 
 
