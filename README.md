@@ -329,6 +329,10 @@ Nun ändern wir die Version von `latest` auf Version 1.0.
 
 Nach dem refereshen des Browser sollte `V1.0` über eingeblendet sein.
 
+Was beim Rolling Update passiert können wir uns wie folgt anzeigen lassen:
+
+    kubectl describe deployment/bpmn-frontend
+
 ## 702.3 Container Infrastructure 
 ***
 
