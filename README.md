@@ -226,7 +226,7 @@ Das Filesystem können wir allerdings noch sehen. Das unterbinden wir mit dem Be
 
     chroot .
     
-Nun laufen wir in einer sogenannten **Sandbox** oder halt in einem **Container**.
+Nun laufen wir in einer sogenannten **Sandbox** oder halt in einem **Container**. Beenden bzw. Rückkehr auf Host OS mittels 2 mal `exit`.
 
 Ausprobieren durch die Anzeige der HOME Verzeichnis
 
@@ -243,7 +243,7 @@ Docker ist ein Produkt welche diese Funktionalität mittels des Kommandozeilenpr
 
     docker run -it ubuntu /bin/bash
     
-Es wird das Container Image `ubuntu` von [https://hub.docker.com](https://hub.docker.com) geholt und als Container gestartet.    
+Es wird das Container Image `ubuntu` von [https://hub.docker.com](https://hub.docker.com) geholt und als Container gestartet. Beenden bzw. mittels `exit`.
 
 #### Container - Kubernetes Variante
 
@@ -292,6 +292,42 @@ Kubernetes Core primitives und Running Microservices
 * [Container Sicherheit aus dem Modul M300](https://github.com/mc-b/M300/blob/master/35-Sicherheit)
 * [Kubernetes aus dem Modul M300](https://github.com/mc-b/M300/tree/master/40-Kubernetes)
 
+    
+#### osTicket Applikation Deployment
+
+[osTicket](http://osticket.com/) ist ein Open-Source-Support-Ticket-System. 
+
+Es leitet Anfragen, die per E-Mail, Webformularen und Telefonanrufen erstellt wurden, nahtlos in eine einfache, benutzerfreundliche webbasierte Kunden-Support-Plattform für mehrere Benutzer um.
+
+osTicket besteht aus einem Frontend welches die Daten in einer Datenbank, vorzugsweise MySQL, speichert.
+
+osTicket kann wie folgt gestartet werden:
+
+    kubectl apply -f duk/osticket/
+    
+Es wird das osTicket Frontend und MySQL gestartet. Jeder Container bekommt eine eindeutige IP und einen DNS Namen (mittels Service). Über diesen DNS Namen finden sich die Container.   
+
+    kubectl get pods,services --selector=app=osticket -o wide
+    
+Um osTicket zu Testen brauchen wir den weitergeleiteten Port. Dieser kann wie folgt ermittelt werden:
+
+    kubectl config view -o=jsonpath='{ .clusters[0].cluster.server }' | sed -e 's/https:/http:/' -e "s/6443/$(kubectl get svc osticket -o=jsonpath='{ .spec.ports[0].nodePort }')/"
+
+### Rolling Update
+
+Kubernetes  unterstützt das Aktualisieren von Images auf eine neue Version mithilfe eines fortlaufenden Aktualisierungs-mechanismus
+
+Zuerst brauchen wir einen Container mit verschiedenen Versionen (Tags). 
+
+    kubectl apply -f https://raw.githubusercontent.com/mc-b/misegr/master/bpmn/bpmn-frontend.yaml 
+  
+Um das Frontend anzuschauen starten wir den Browser mit [https://localhost:30443/frontend/index.html](https://localhost:30443/frontend/index.html).
+
+Nun ändern wir die Version von `latest` auf Version 1.0.
+
+    kubectl set image deployment/bpmn-frontend bpmn-frontend=misegr/bpmn-frontend:V1.0
+
+Nach dem refereshen des Browser sollte `V1.0` über eingeblendet sein.
 
 ## 702.3 Container Infrastructure 
 ***
