@@ -79,11 +79,11 @@ Key Knowledge Areas:
 * Features and concepts of content delivery networks
 
 The following is a partial list of the used files, terms and utilities:
-* OpenStack Swift
-* OpenStack Trove
-* OpenStack Zaqar
-* CloudFoundry
-* OpenShift
+* [OpenStack](https://www.openstack.org/software/) Swift
+* [OpenStack](https://www.openstack.org/software/) Trove
+* [OpenStack](https://www.openstack.org/software/) Zaqar
+* [CloudFoundry](https://www.cloudfoundry.org/)
+* [OpenShift](https://openshift.io/)
 
 **Unterlagen**
 
