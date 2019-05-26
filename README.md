@@ -40,9 +40,9 @@ The following is a partial list of the used files, terms and utilities:
 * Microservices
 * Immutable servers
 * Loose coupling
-* Cross site scripting, SQL injections, verbose error reports, API authentication, consistent enforcement of transport encryption
-* CORS headers and CSRF tokens
-* ACID properties and CAP theorem
+* [Cross site scripting](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)), [SQL injections](https://www.owasp.org/index.php/SQL_Injection), verbose error reports, API authentication, consistent enforcement of transport encryption
+* [CORS headers](https://de.wikipedia.org/wiki/Cross-Origin_Resource_Sharing) and [CSRF tokens](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery)
+* [ACID](https://de.wikipedia.org/wiki/ACID) properties and [CAP theorem](https://de.wikipedia.org/wiki/CAP-Theorem)
 
 **Unterlagen**
 
