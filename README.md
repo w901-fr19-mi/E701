@@ -102,6 +102,10 @@ Message Brokers und Message Queues
 * [Kafka](https://github.com/mc-b/duk/tree/master/kafka)
 * [Spark](https://github.com/mc-b/bigdata/tree/master/spark)
 
+Apache WebServer / CGI-BIN / Shellscript
+* Beispiel wie mit der CGI Funktionalität eines Web Servers ein ShellScript aufgerufen werden kann.  
+* [Docker Image mit Apache Web Server und REST Umgebung](https://github.com/mc-b/IoTKit/tree/master/docker/apache-rest) - siehe rest und restsql Scripts
+
 ### 701.3 Source Code Management 
 *** 
 
