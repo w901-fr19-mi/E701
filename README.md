@@ -104,8 +104,10 @@ Message Brokers und Message Queues
 
 Apache WebServer / CGI-BIN / Shellscript
 * Beispiel wie mit der CGI Funktionalität eines Web Servers ein ShellScript aufgerufen werden kann.  
-* [Docker Image mit Apache Web Server und REST Umgebung](https://github.com/mc-b/IoTKit/tree/master/docker/apache-rest) - siehe rest und restsql Scripts
-
+* [Docker Image mit Apache Web Server und REST Umgebung](https://github.com/mc-b/IoTKitV2/tree/master/LAM) - siehe rest und restsql Scripts
+* Bei den Beispielen ist die IP-Adresse `192.168.55.101` durch die IP-Adresse und Port vom Kubernetes Master zu ersetzen, z.B. `192.168.1.15:32760`
+* Eine YAML Datei zum Starten eines vorgefertigten LAM (Linux/Apache/MySQL + REST) Containers befindet sich in [Apache / CGI-BIN / Bash](https://github.com/mc-b/duk/tree/master/iot#apache--cgi-bin--bash). Dieser Container hat steuert auf `http://xx/rest/cgi-bin` statt `http://xx/cgi-bin`.
+    
 ### 701.3 Source Code Management 
 *** 
 
