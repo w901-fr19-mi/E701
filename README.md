@@ -60,6 +60,13 @@ Wenn solch ein Monolith dann skaliert werden muss, kann man sich meist nur dazu 
 
 In einer Microservices-Architektur ist es möglich, nur die Ressourcen zu skalieren, die für einen bestimmten Service benötigt werden, und sich damit auf die Flaschenhälse des Systems zu beschränken. In einem Monolith wird alles oder gar nichts skaliert, was zu verschwendeten Ressourcen führt.
  
+**Beispiele**
+
+* [Beispiele zum Kurs Microservices-Grundlagen («MISEGR»)](https://github.com/mc-b/misegr)
+* [Frontend Microservices (Edge Side Include ESI)](https://github.com/mc-b/misegr/tree/master/ewolff#scs-esi-beispiel-frontend)
+* [Synchrone Microservices](https://github.com/mc-b/misegr/tree/master/ewolff#microservice-kubernetes-sample)
+* [Asynchrone Microservices](https://github.com/mc-b/misegr/tree/master/ewolff#microservice-kafka-sample)
+
 
 ### 701.2 Standard Components and Platforms for Software
 *** 
