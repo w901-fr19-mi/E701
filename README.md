@@ -66,6 +66,7 @@ In einer Microservices-Architektur ist es möglich, nur die Ressourcen zu skalie
 * [Frontend Microservices (Edge Side Include ESI)](https://github.com/mc-b/misegr/tree/master/ewolff#scs-esi-beispiel-frontend)
 * [Synchrone Microservices](https://github.com/mc-b/misegr/tree/master/ewolff#microservice-kubernetes-sample)
 * [Asynchrone Microservices](https://github.com/mc-b/misegr/tree/master/ewolff#microservice-kafka-sample)
+* [Internet of Things – Machine Learning Fast Data Pipeline mit Docker/Kubernetes](https://github.com/mc-b/devday#aufbau-einer-internet-of-things--machine-learning-fast-data-pipeline-mit-dockerkubernetes)
 
 
 ### 701.2 Standard Components and Platforms for Software
